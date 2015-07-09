@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  search: MyString
+  country: MyString
+  browser: MyString
+  dateprint: 2015-05-13 14:35:17
+  rol: 1
+
+two:
+  search: MyString
+  country: MyString
+  browser: MyString
+  dateprint: 2015-05-13 14:35:17
+  rol: 1

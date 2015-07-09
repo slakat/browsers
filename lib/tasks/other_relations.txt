@@ -1,0 +1,98 @@
+6815 "malicioso"  2013-09-21 22:16:40 UTC GOOGLE
+6816 "Malicioso" 2013-09-21 21:53:00 UTC BING 
+
+7118 mayi 2013-10-12 18:18:08 UTC GOOGLE Páginas de Chile
+7120 mayi 2013-10-12 18:18:10 UTC GOOGLE Páginas de España
+
+7353 mismos resultados  2013-09-21 21:39:38 UTC GOOGLE 
+7354 mismos resultados 2013-09-21 21:20:58 UTC BING 
+
+7599 natalia 2013-10-30 16:00:14 UTC GOOGLE País: Chile
+7607 natalia 2013-10-30 16:00:16 UTC GOOGLE País: España
+
+7616 nataniel 2013-10-13 18:30:16 UTC GOOGLE Páginas de Chile
+7618 nataniel 2013-10-13 18:30:18 UTC GOOGLE Páginas de España
+
+7793 "no es spam"  2013-09-21 22:16:38 UTC GOOGLE 
+7794 "No es spam" 2013-09-21 21:51:26 UTC BING 
+
+7805 no tengo internet 2013-10-03 16:23:40 UTC GOOGLE Páginas de Chile
+7806 no tengo internet 2013-10-03 16:34:20 UTC BING 
+
+7958 ola 2013-10-06 16:25:02 UTC GOOGLE Páginas de Chile
+7969 ola 2013-10-06 16:25:02 UTC BING 
+
+8243 paulina 2013-10-15 19:54:26 UTC GOOGLE Páginas de Chile
+8247 paulina 2013-10-15 19:54:26 UTC BING 
+
+8253 paulo 2013-10-19 14:29:58 UTC GOOGLE Páginas de Chile
+8256 paulo 2013-10-19 14:30:00 UTC BING 
+
+8461 personalizacion  2013-09-21 21:39:34 UTC GOOGLE 
+8462 personalizacion 2013-09-20 22:14:10 UTC BING 
+
+8560 pipi 2013-11-02 18:40:54 UTC GOOGLE País: Chile
+8563 pipi 2013-11-02 18:40:56 UTC GOOGLE Corta (0-4 minutos)
+
+8607 "podria ser spam"  2013-09-21 22:16:36 UTC GOOGLE 
+8608 Podria ser spam 2013-09-21 21:52:04 UTC BING 
+
+8645 "pornografia"  2013-09-21 22:16:32 UTC GOOGLE 
+8646 "Pornografia" 2013-09-21 21:52:44 UTC BING 
+
+8727 Prueba diferentes palabras clave 2013-10-10 13:31:48 UTC GOOGLE Páginas de Chile
+8883 Prueba diferentes palabras clave 2013-10-10 13:31:50 UTC BING 
+
+8743 Prueba diferentes palabras clave 2013-10-25 16:36:38 UTC GOOGLE Páginas de Chile
+8899 Prueba diferentes palabras clave 2013-10-25 16:36:38 UTC BING 
+
+8750 Prueba diferentes palabras clave 2013-10-25 17:07:02 UTC GOOGLE Páginas de Chile
+
+8797 Prueba diferentes palabras clave 2013-10-08 20:34:04 UTC GOOGLE Páginas de Chile
+8952 Prueba diferentes palabras clave 2013-10-08 20:34:04 UTC BING 
+
+8805 Prueba diferentes palabras clave 2013-10-12 16:09:22 UTC GOOGLE Páginas de Chile
+8960 Prueba diferentes palabras clave 2013-10-12 16:09:22 UTC BING 
+
+8825 Prueba diferentes palabras clave 2013-10-09 14:35:50 UTC GOOGLE Páginas de Chile
+8980 Prueba diferentes palabras clave 2013-10-09 14:35:52 UTC BING 
+
+8849 Prueba diferentes palabras clave 2013-10-27 20:26:10 UTC GOOGLE Páginas de Chile
+9004 Prueba diferentes palabras clave 2013-10-27 20:26:12 UTC BING 
+
+9042 Prueba palabras clave más generales 2013-10-25 14:47:58 UTC GOOGLE Páginas de Chile
+
+9056 Prueba palabras clave más generales 2013-10-13 14:38:32 UTC GOOGLE Páginas de Chile
+9206 Prueba palabras clave más generales 2013-10-13 14:38:32 UTC BING 
+
+9148 Prueba palabras clave más generales 2013-10-27 19:59:06 UTC GOOGLE Páginas de Chile
+9298 Prueba palabras clave más generales 2013-10-27 19:59:06 UTC BING 
+
+9811 sarte 2013-10-13 16:26:42 UTC GOOGLE Páginas de Chile
+
+9854 secreto  2013-09-21 22:18:28 UTC GOOGLE 
+9855 secreto 2013-09-21 22:13:34 UTC BING 
+
+9994 si 2013-10-05 16:58:20 UTC GOOGLE Páginas de Chile
+10015 si 2013-10-05 16:58:20 UTC GOOGLE Páginas de España
+
+10103 sonrie 2013-10-30 20:31:20 UTC GOOGLE País: Chile
+10105 sonrie 2013-10-30 20:31:22 UTC BING 
+
+10124 "spam"  2013-09-21 22:11:06 UTC GOOGLE 
+10125 "Spam" 2013-09-21 21:52:26 UTC BING 
+
+10225 Sugerencias 2013-10-13 19:02:36 UTC GOOGLE Páginas de Chile
+10390 Sugerencias 2013-10-13 19:02:36 UTC BING 
+
+10284 Sugerencias 2013-10-06 20:40:40 UTC GOOGLE Páginas de Chile
+10449 Sugerencias 2013-10-06 20:40:40 UTC BING 
+
+10322 Sugerencias 2013-10-19 19:09:00 UTC GOOGLE Páginas de Chile
+10487 Sugerencias 2013-10-19 19:09:02 UTC BING 
+
+10947 viaje 2013-10-11 16:53:56 UTC GOOGLE Páginas de Chile
+10950 viaje 2013-10-11 16:53:58 UTC BING 
+
+11292 zalgo 2013-10-28 18:53:34 UTC GOOGLE Páginas de Chile
+11296 zalgo 2013-10-28 18:54:30 UTC GOOGLE Páginas de España

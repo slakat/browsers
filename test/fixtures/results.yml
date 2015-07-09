@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  position: 1
+  title: MyString
+  link: MyString
+  snippet: 
+  record_id: 
+
+two:
+  position: 1
+  title: MyString
+  link: MyString
+  snippet: 
+  record_id: 
