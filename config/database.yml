@@ -30,4 +30,7 @@ test:
 
 production:
   <<: *default
+  database: browsers_prod
+  username: root
+  host: 127.0.0.1
   #database: db/production.sqlite3

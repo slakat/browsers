@@ -8,7 +8,15 @@ Bundler.require(*Rails.groups)
 
 module Browsers
   class Application < Rails::Application
+
+    config.time_zone = 'Santiago'
     config.autoload_paths += %W(#{config.root}/lib)
+    config.i18n.default_locale = :es
+    I18n.enforce_available_locales = true
+    config.assets.enabled = true
+    config.assets.paths << "#{Rails.root}/app/assets/fonts"
+    config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
