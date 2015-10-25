@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150514220207) do
+ActiveRecord::Schema.define(version: 20151024205712) do
+
+  create_table "comparisons", force: :cascade do |t|
+    t.integer  "result_a_id",   limit: 4
+    t.integer  "result_b_id",   limit: 4
+    t.boolean  "same_content",  limit: 1
+    t.boolean  "related_pages", limit: 1
+    t.integer  "relation_id",   limit: 4
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  add_index "comparisons", ["relation_id"], name: "index_comparisons_on_relation_id", using: :btree
+  add_index "comparisons", ["result_a_id"], name: "index_comparisons_on_result_a_id", using: :btree
+  add_index "comparisons", ["result_b_id"], name: "index_comparisons_on_result_b_id", using: :btree
 
   create_table "records", force: :cascade do |t|
     t.string   "search",     limit: 191
