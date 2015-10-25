@@ -6,6 +6,7 @@ class CreateComparisons < ActiveRecord::Migration
       t.boolean :same_content
       t.boolean :related_pages
       t.integer :relation_id, index: true
+      t.string :error, index: true
       t.timestamps null: false
     end
   end

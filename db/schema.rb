@@ -19,10 +19,12 @@ ActiveRecord::Schema.define(version: 20151024205712) do
     t.boolean  "same_content",  limit: 1
     t.boolean  "related_pages", limit: 1
     t.integer  "relation_id",   limit: 4
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.string   "error",         limit: 191
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
+  add_index "comparisons", ["error"], name: "index_comparisons_on_error", using: :btree
   add_index "comparisons", ["relation_id"], name: "index_comparisons_on_relation_id", using: :btree
   add_index "comparisons", ["result_a_id"], name: "index_comparisons_on_result_a_id", using: :btree
   add_index "comparisons", ["result_b_id"], name: "index_comparisons_on_result_b_id", using: :btree
