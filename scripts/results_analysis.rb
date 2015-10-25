@@ -49,6 +49,8 @@ def check_http(url)
   return url
 end
 
+content = false
+relation = false
 
 Relation.all.each do |r|
   results_a = r.record_a.results
@@ -58,11 +60,14 @@ Relation.all.each do |r|
     u1 = check_http(a.link)
     url_a = URI.encode(u1)
     begin
+      content = false
+      relation = false
       doc1 = Nokogiri::HTML(open(URI.parse(url_a), :allow_redirections => :all, 'User-Agent' => USER_AGENT))
 
       results_b.each do |b|
         content = false
         relation = false
+
         if Comparison.where(result_a: a,result_b: b).blank?
           u2 = check_http b.link
           url_b = URI.encode(u2)
