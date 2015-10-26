@@ -104,12 +104,15 @@ Relation.all.each do |r|
         end
       end
 
-    rescue => error
-      response = error.io
-      msg = response.status[0]+":"+response.status[1]
-      puts msg
-      if Comparison.where(result_a: a,result_b: nil).blank?
-        Comparison.create!(result_a: a, result_b: nil,same_content:content,related_pages: relation, relation: r, error: msg)
+    rescue Errno::ETIMEDOUT,OpenURI::HTTPError => error
+      puts error.class
+      if error.class == OpenURI::HTTPError
+        response = error.io
+        msg = response.status[0]+":"+response.status[1]
+        puts msg
+        if Comparison.where(result_a: a,result_b: nil).blank?
+          Comparison.create!(result_a: a, result_b: nil,same_content:content,related_pages: relation, relation: r, error: msg)
+        end
       end
     end
 
