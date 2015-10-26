@@ -94,17 +94,20 @@ Relation.all.each do |r|
             end
 
             Comparison.create!(result_a: a, result_b: b,same_content:content,related_pages: relation, relation: r, error: nil)
-          rescue => error
-            response = error.io
-            msg = response.status[0]+":"+response.status[1]
-            puts msg
-            Comparison.create!(result_a: a, result_b: b,same_content:content,related_pages: relation, relation: r, error: msg)
+          rescue  => error
+            puts error.class
+            if error.class == OpenURI::HTTPError
+              response = error.io
+              msg = response.status[0]+":"+response.status[1]
+              puts msg
+              Comparison.create!(result_a: a, result_b: b,same_content:content,related_pages: relation, relation: r, error: msg)
+            end
           end
 
         end
       end
 
-    rescue Errno::ETIMEDOUT,OpenURI::HTTPError => error
+    rescue  => error
       puts error.class
       if error.class == OpenURI::HTTPError
         response = error.io
