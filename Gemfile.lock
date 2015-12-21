@@ -81,7 +81,10 @@ GEM
     domainatrix (0.0.11)
       addressable
     erubis (2.7.0)
+    ethon (0.8.0)
+      ffi (>= 1.3.0)
     execjs (2.6.0)
+    ffi (1.9.10)
     fuzzy-string-match (0.9.7)
       RubyInline (>= 3.8.6)
     globalid (0.3.6)
@@ -113,6 +116,7 @@ GEM
       nokogiri (~> 1.5)
       tdiff (~> 0.3, >= 0.3.2)
     open_uri_redirections (0.2.1)
+    parallel (1.6.1)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -168,6 +172,8 @@ GEM
     tilt (2.0.1)
     turbolinks (2.5.3)
       coffee-rails
+    typhoeus (0.8.0)
+      ethon (>= 0.8.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.7.2)
@@ -198,11 +204,13 @@ DEPENDENCIES
   mysql
   nokogiri-diff
   open_uri_redirections
+  parallel
   rails (= 4.2.1)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   tdiff
   turbolinks
+  typhoeus
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (~> 2.0)

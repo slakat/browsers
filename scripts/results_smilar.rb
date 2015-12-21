@@ -56,27 +56,26 @@ Relation.all.each do |r|
   results_a = r.record_a.results
   results_b = r.record_b.results
 
-  results_a.first(5).each do |a|
+  results_a.each do |a|
     u1 = check_http(a.link)
     url_a = URI.encode(u1)
     begin
       content = false
       relation = false
-      
+      #doc1 = Nokogiri::HTML(open(URI.parse(url_a), :allow_redirections => :all, 'User-Agent' => USER_AGENT))
 
-      results_b.first(5).each do |b|
+      results_b.each do |b|
         content = false
         relation = false
 
-        if Comparison.where(result_a: a,result_b: b).blank?
-          doc1 = Nokogiri::HTML(open(url_a))
+        if Similarity.where(result_a: a,result_b: b).blank?
           u2 = check_http b.link
           url_b = URI.encode(u2)
           puts "link A: =====> "+u1
           puts "link B: =====> "+u2
           begin
-            doc2 = Nokogiri::HTML(open(url_b))
-            distance = jarow.getDistance(doc1.to_s, doc2.to_s)>0.8 # 0.85 .. that is the text looks to be 85% similar
+            #doc2 = Nokogiri::HTML(open(URI.parse(url_b), :allow_redirections => :all, 'User-Agent' => USER_AGENT))
+            distance = jarow.getDistance(u1.to_s, u2.to_s)>0.95 # 0.85 .. that is the text looks to be 85% similar
             if (SameOrigin.relaxed_test2 u1, u2)
               puts "related"
               relation = true
@@ -85,7 +84,7 @@ Relation.all.each do |r|
             end
 
 
-            if (doc1.diff(doc2) and distance)
+            if (distance)
               puts "same"
               content = true
             else
@@ -94,14 +93,14 @@ Relation.all.each do |r|
             #sleep INTERVAL
             end
 
-            Comparison.create!(result_a: a, result_b: b,same_content:content,related_pages: relation, relation: r, error: nil)
+            Similarity.create!(result_a: a, result_b: b,same_content:content,related_pages: relation, relation: r, error: nil)
           rescue  => error
             puts error.class
             if error.class == OpenURI::HTTPError
               response = error.io
               msg = response.status[0]+":"+response.status[1]
               puts msg
-              Comparison.create!(result_a: a, result_b: b,same_content:content,related_pages: relation, relation: r, error: msg)
+              Similarity.create!(result_a: a, result_b: b,same_content:content,related_pages: relation, relation: r, error: msg)
             end
           end
 
@@ -114,8 +113,8 @@ Relation.all.each do |r|
         response = error.io
         msg = response.status[0]+":"+response.status[1]
         puts msg
-        if Comparison.where(result_a: a,result_b: nil).blank?
-          Comparison.create!(result_a: a, result_b: nil,same_content:content,related_pages: relation, relation: r, error: msg)
+        if Similarity.where(result_a: a,result_b: nil).blank?
+          Similarity.create!(result_a: a, result_b: nil,same_content:content,related_pages: relation, relation: r, error: msg)
         end
       end
     end
