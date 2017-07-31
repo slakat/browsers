@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151215131332) do
+ActiveRecord::Schema.define(version: 20160329014102) do
+
+  create_table "all_matches", force: :cascade do |t|
+    t.integer  "match_counts", limit: 4
+    t.integer  "segment",      limit: 4
+    t.integer  "relation_id",  limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "all_matches", ["relation_id"], name: "index_all_matches_on_relation_id", using: :btree
+  add_index "all_matches", ["segment"], name: "index_all_matches_on_segment", using: :btree
 
   create_table "comparisons", force: :cascade do |t|
     t.integer  "result_a_id",   limit: 4
@@ -29,6 +40,17 @@ ActiveRecord::Schema.define(version: 20151215131332) do
   add_index "comparisons", ["result_a_id"], name: "index_comparisons_on_result_a_id", using: :btree
   add_index "comparisons", ["result_b_id"], name: "index_comparisons_on_result_b_id", using: :btree
 
+  create_table "dirty_matches", force: :cascade do |t|
+    t.integer  "match_counts", limit: 4
+    t.integer  "segment",      limit: 4
+    t.integer  "relation_id",  limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "dirty_matches", ["relation_id"], name: "index_dirty_matches_on_relation_id", using: :btree
+  add_index "dirty_matches", ["segment"], name: "index_dirty_matches_on_segment", using: :btree
+
   create_table "likes", force: :cascade do |t|
     t.integer  "result_a_id",   limit: 4
     t.integer  "result_b_id",   limit: 4
@@ -44,6 +66,17 @@ ActiveRecord::Schema.define(version: 20151215131332) do
   add_index "likes", ["relation_id"], name: "index_likes_on_relation_id", using: :btree
   add_index "likes", ["result_a_id"], name: "index_likes_on_result_a_id", using: :btree
   add_index "likes", ["result_b_id"], name: "index_likes_on_result_b_id", using: :btree
+
+  create_table "perfect_matches", force: :cascade do |t|
+    t.integer  "match_counts", limit: 4
+    t.integer  "segment",      limit: 4
+    t.integer  "relation_id",  limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "perfect_matches", ["relation_id"], name: "index_perfect_matches_on_relation_id", using: :btree
+  add_index "perfect_matches", ["segment"], name: "index_perfect_matches_on_segment", using: :btree
 
   create_table "records", force: :cascade do |t|
     t.string   "search",     limit: 191
@@ -101,5 +134,8 @@ ActiveRecord::Schema.define(version: 20151215131332) do
   add_index "similarities", ["result_a_id"], name: "index_similarities_on_result_a_id", using: :btree
   add_index "similarities", ["result_b_id"], name: "index_similarities_on_result_b_id", using: :btree
 
+  add_foreign_key "all_matches", "relations"
+  add_foreign_key "dirty_matches", "relations"
+  add_foreign_key "perfect_matches", "relations"
   add_foreign_key "results", "records"
 end
